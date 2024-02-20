@@ -9,5 +9,9 @@ This Port Scanner can : -
 - Discover version of service on some of the open ports
 - Be able to scan multiple targets
 
-### Note
-- Requires TermColor python module (Used to differentiate output categories)
+### Requirements
+- TermColor python module (Used to differentiate output categories)
+
+```pip
+pip install termcolor
+```
