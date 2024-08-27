@@ -17,7 +17,13 @@ A Desktop application that retrieves and displays Windows Event Logs (default up
 for event in events[:5]:
 ```
 
-2. Run as Administrator for access to Security logs.
+2.If time format error occurs, use the following command to adjust accordingly
+
+```Powershell
+Get-Date
+```
+
+3. Run as Administrator for access to Security logs.
 
 ## Prerequisites
 
