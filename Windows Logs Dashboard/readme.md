@@ -17,7 +17,7 @@ A Desktop application that retrieves and displays Windows Event Logs (default up
 for event in events[:5]:
 ```
 
-2.If time format error occurs, use the following command to adjust accordingly
+2. If time format error occurs, use the following command to adjust accordingly
 
 ```Powershell
 Get-Date
