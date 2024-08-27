@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Windows Logs Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Windows Logs Dashboard</h1>
+        </header>
+        <main>
+            <div class="log-section">
+                <div class="logs">
+                    <h2>Application Logs</h2>
+                    <table id="application-log-table">
+                        <thead>
+                            <tr>
+                                <th>Timestamp</th>
+                                <th>Event ID</th>
+                                <th>Source</th>
+                                <th>Category</th>
+                                <th>Message</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Data will be populated here -->
+                        </tbody>
+                    </table>
+                </div>
+                <div class="chart">
+                    <h2>Severity Distribution for Application Logs</h2>
+                    <canvas id="application-severity-chart"></canvas>
+                </div>
+            </div>
+            <div class="log-section">
+                <div class="logs">
+                    <h2>System Logs</h2>
+                    <table id="system-log-table">
+                        <thead>
+                            <tr>
+                                <th>Timestamp</th>
+                                <th>Event ID</th>
+                                <th>Source</th>
+                                <th>Category</th>
+                                <th>Message</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Data will be populated here -->
+                        </tbody>
+                    </table>
+                </div>
+                <div class="chart">
+                    <h2>Severity Distribution for System Logs</h2>
+                    <canvas id="system-severity-chart"></canvas>
+                </div>
+            </div>
+            <div class="log-section">
+                <div class="logs">
+                    <h2>Security Logs</h2>
+                    <table id="security-log-table">
+                        <thead>
+                            <tr>
+                                <th>Timestamp</th>
+                                <th>Event ID</th>
+                                <th>Source</th>
+                                <th>Category</th>
+                                <th>Message</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Data will be populated here -->
+                        </tbody>
+                    </table>
+                </div>
+                <div class="chart">
+                    <h2>Severity Distribution for Security Logs</h2>
+                    <canvas id="security-severity-chart"></canvas>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
