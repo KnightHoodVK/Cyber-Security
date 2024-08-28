@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Incident Response Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Incident Response Dashboard</h1>
+        </header>
+        <main>
+            <div class="loading" id="loading-message">Loading...</div>
+            <div class="dashboard-overview">
+                <h2>Dashboard Overview</h2>
+                <div class="overview-items">
+                    <div class="overview-item" id="system-health">
+                        <h3>System Health</h3>
+                        <p>Loading system health data...</p>
+                    </div>
+                    <div class="overview-item" id="active-alerts">
+                        <h3>Active Alerts</h3>
+                        <p>Loading active alerts...</p>
+                    </div>
+                    <div class="overview-item" id="incident-summary">
+                        <h3>Incident Summary</h3>
+                        <p>Loading incident summary...</p>
+                    </div>
+                    <div class="overview-item" id="recent-activities">
+                        <h3>Recent Activities</h3>
+                        <p>Loading recent activities...</p>
+                    </div>
+                </div>
+            </div>
+            <div class="incident-tracking">
+                <h2>Incident Tracking</h2>
+                <div class="incident-list">
+                    <table id="incident-table">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Name</th>
+                                <th>Status</th>
+                                <th>Priority</th>
+                                <th>Timestamp</th>
+                                <th>Source</th>
+                                <th>Message</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Incident rows will be inserted here -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="playbook-steps">
+                <h2>NIST Incident Response Playbook Steps</h2>
+                <ol id="playbook-steps-list">
+                    <!-- Playbook steps will be inserted here -->
+                </ol>
+            </div>
+            <div id="incident-detail-content">
+                <!-- Incident details will be dynamically inserted here -->
+            </div>
+        </main>
+    </div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

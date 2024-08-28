@@ -1,0 +1,148 @@
+/* Material Design Color Palette */
+:root {
+    --primary-color: #6200ea; /* Deep Purple */
+    --primary-light: #9d46ff; /* Light Purple */
+    --primary-dark: #0b0033; /* Dark Purple */
+    --background-color: #f4f4f4; /* Light Gray */
+    --surface-color: #ffffff; /* White */
+    --on-surface-color: #000000; /* Black */
+    --on-primary-color: #ffffff; /* White */
+}
+
+/* Global Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: url('/static/background.png') no-repeat center center fixed;
+    background-size: cover;
+    color: var(--on-surface-color);
+}
+
+/* Loading Indicator */
+.loading {
+    text-align: center;
+    padding: 20px;
+    font-size: 1.2rem;
+    color: var(--primary-color);
+    display: none; /* Hide by default, shown while loading */
+}
+
+/* Error Messages */
+.error {
+    color: red;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Header Styles */
+header {
+    background-color: var(--primary-color);
+    color: var(--on-primary-color);
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Container Styles */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Dashboard Overview Styles */
+.dashboard-overview {
+    margin-bottom: 40px;
+}
+
+.overview-items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.overview-item {
+    flex: 1;
+    min-width: 250px;
+    background: rgba(255, 255, 255, 0.1); /* Glass effect */
+    backdrop-filter: blur(10px); /* Frosted glass effect */
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+/* Incident Tracking and Playbook Steps */
+.incident-tracking, .playbook-steps {
+    margin-bottom: 40px;
+}
+
+.incident-list {
+    width: 100%;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.1); /* Glass effect */
+    backdrop-filter: blur(10px); /* Frosted glass effect */
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Table Styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 12px; /* Increased padding for better readability */
+    text-align: left;
+}
+
+th {
+    background-color: var(--primary-light);
+    color: var(--on-primary-color);
+}
+
+ul {
+    list-style-type: none; /* Remove bullets */
+}
+
+
+/* List Styles */
+ol {
+    margin: 0;
+    padding-left: 20px;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+/* Incident Details Styles */
+#incident-detail-content {
+    background: rgba(255, 255, 255, 0.1); /* Glass effect */
+    backdrop-filter: blur(10px); /* Frosted glass effect */
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Design */
+@media (min-width: 1024px) {
+    .container {
+        width: 85%; /* Increase container width for larger screens */
+    }
+}
+
+@media (max-width: 600px) {
+    table th, table td {
+        font-size: 0.9rem; /* Adjust table font size on smaller screens */
+        padding: 8px; /* Decrease padding on smaller screens */
+    }
+}
