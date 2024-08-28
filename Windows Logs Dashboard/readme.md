@@ -37,7 +37,7 @@ Only if modifying app.py
 To build executable; -
 
 ```Powershell
-pyinstaller --onefile --name=my_flask_exe app.py
+pyinstaller --onefile --add-data "static;static" --add-data "templates;templates" my_flask_exe.py
 
 pyinstaller my_flask_exe.spec
 
